@@ -53,7 +53,6 @@ Each line in the input file should represent one memory access request in the fo
 *   `VIRTUAL_ADDRESS`: A hexadecimal address (e.g., `0x03A0`).
 *   `BYTE`: The character to be written (only required for `W` operations).
 
----
 
 ## Demonstrating Virtual Memory Concepts
 
