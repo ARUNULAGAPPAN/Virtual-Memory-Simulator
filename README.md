@@ -1,4 +1,3 @@
-Of course. Here is the previous response formatted as a `README.md` document, suitable for a project repository.
 
 ---
 
