@@ -112,24 +112,4 @@ Below are several test cases designed to explain the key concepts demonstrated b
     5.  Page 3 is then loaded into the newly freed frame.
     6.  The final stats will show **one swap disk write**.
 
-### Scenario 3: The Importance of the Dirty Bit
 
-**Concept:** The dirty bit optimizes performance by preventing unnecessary disk writes. If a page is evicted but was never modified, it can be discarded without writing it to disk.
-
-*   **Configuration:**
-    ```bash
-    # Command to run (4 pages, 3 frames, 1 process, FIFO)
-    ./vm 4 3 1 1 < requests.txt
-    ```
-*   **Input File (`requests.txt`):**
-    ```
-    # Read from page 0. It is loaded but NOT dirty.
-    0 R 0x0000
-    # Write to pages 1 and 2. They ARE dirty.
-    0 W 0x0100 B
-    0 W 0x0200 C
-    # This access evicts page 0
-    0 W 0x0300 D
-    ```
-*   **Explanation:**
-    1.  
